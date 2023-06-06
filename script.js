@@ -17,12 +17,16 @@ createApp({
             element = this.toDoList[index];
             element.completed = !element.completed;
 
-            console.log("funzia");
             return element;
         },
-        deleteTask(element, index, array) {
+        deleteTask(element, index) {
             element = this.toDoList[index];
             array.splice(element[index], 1);
+        },
+
+        addToList(obj) {
+            this.toDoList.push({ text: obj, completed: false });
+            this.newObject = "";
         },
     },
 }).mount("#app");

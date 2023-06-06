@@ -3,3 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.list-container li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.deleted-text{
+    text-decoration: line-through;
+}

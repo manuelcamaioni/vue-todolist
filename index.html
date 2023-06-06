@@ -26,5 +26,24 @@
 
         <title>Vue ToDoList</title>
     </head>
-    <body></body>
+    <body>
+        <main id="app">
+            <div class="wrapper">
+                <h1>To Do List</h1>
+                <ul class="list-container">
+                    <li v-for="(element, index) in toDoList">
+                        <span :class="(element.completed) ? 'deleted-text' : ''"
+                            >{{element.text}}</span
+                        ><button
+                            class="btn"
+                            :class="(!element.completed) ? 'bg-warning' : 'bg-success'"
+                            @click="toggleTask(element, index)"
+                        >
+                            {{element.completed}}
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </body>
 </html>

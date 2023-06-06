@@ -36,10 +36,10 @@
                     <input
                         type="text"
                         name="addTask"
-                        v-model="newObject"
-                        @keyup.enter="addToList(newObject)"
+                        v-model="newString"
+                        @keyup.enter="addToList(newString)"
                     />
-                    <button class="btn btn-dark" @click="addToList(newObject)">
+                    <button class="btn btn-dark" @click="addToList(newString)">
                         Aggiungi
                     </button>
                 </div>

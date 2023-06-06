@@ -28,7 +28,7 @@
     </head>
     <body>
         <main id="app">
-            <div class="wrapper">
+            <div class="wrapper card">
                 <h1>To Do List</h1>
 
                 <div class="wrap-adder d-flex flex-column">
@@ -39,6 +39,7 @@
                         v-model="newString"
                         @keyup.enter="addToList(newString)"
                     />
+                    <!--v-model e' l'input value -->
                     <button class="btn btn-dark" @click="addToList(newString)">
                         Aggiungi
                     </button>

@@ -25,7 +25,7 @@ createApp({
 
         addToList(obj) {
             this.toDoList.push({ text: obj, completed: false });
-            this.newObject = "";
+            this.newObject = ""; // resetta l'input value perche' il v-model ha come valore newObject, quindi quando l'evento si attiva, pusha l'oggetto con {text:obj} che ha preso il valore di newObject
         },
     },
 }).mount("#app");

@@ -20,5 +20,9 @@ createApp({
             console.log("funzia");
             return element;
         },
+        deleteTask(element, index, array) {
+            element = this.toDoList[index];
+            array.splice(element[index], 1);
+        },
     },
 }).mount("#app");

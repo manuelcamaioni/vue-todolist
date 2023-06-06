@@ -34,13 +34,22 @@
                     <li v-for="(element, index) in toDoList">
                         <span :class="(element.completed) ? 'deleted-text' : ''"
                             >{{element.text}}</span
-                        ><button
-                            class="btn"
-                            :class="(!element.completed) ? 'bg-warning' : 'bg-success'"
-                            @click="toggleTask(element, index)"
                         >
-                            {{element.completed}}
-                        </button>
+                        <div class="buttons">
+                            <button
+                                class="btn"
+                                :class="(!element.completed) ? 'bg-warning' : 'bg-success'"
+                                @click="toggleTask(element, index)"
+                            >
+                                {{element.completed}}
+                            </button>
+                            <button
+                                class="btn"
+                                @click="deleteTask(element, index, toDoList)"
+                            >
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>

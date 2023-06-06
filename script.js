@@ -19,9 +19,9 @@ createApp({
 
             return element;
         },
-        deleteTask(element, index) {
+        deleteTask(element, index, array) {
             element = this.toDoList[index];
-            array.splice(element[index], 1);
+            array.splice(index, 1);
         },
 
         addToList(obj) {
